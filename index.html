@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agilex Calculator</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Agilex Shipping Calculator</h1>
+    </div>
+
+    <form id="shipping-form" class="shipping-form">
+        <section id="first_column">        
+            <div>
+                <h3>Region</h3>
+                <select id="region" name="region" class="select-style">
+                    <option value="us_canada_pr">Estados Unidos, Canada y Puerto Rico</option>
+                    <option value="latin_america">Latinoamerica</option>
+                    <option value="caribbean">Caribe</option>
+                    <option value="europe_world">Europa y resto del mundo</option>
+                </select>
+            </div>       
+            <div id="servicios" >
+                <h3>Servicios</h3>
+                <div id="radios">
+                    <label for="agilex_cea">Agilex CEA</label>
+                    <input type="radio" id="agilex_cea" name="service" />
+                    <label for="agilex_top">Agilex Top</label>
+                    <input type="radio" id="agilex_top" name="service" />
+                    <label for="agilex_aliados" >Agilex Aliados</label>
+                    <input type="radio" id="agilex_aliados" name="service" />
+                    <label for="agilbox">Agilbox</label>
+                    <input type="radio" id="agilbox" name="service" />
+                    <label for="copa" >Copa</label>
+                    <input type="radio" id="copa" name="service" />
+                    <label for="nuevas_rutas">Nuevas Rutas</label>
+                    <input type="radio" id="nuevas_rutas" name="service" />
+                    <span id="slider"></span>
+                </div>
+
+            </div>
+        </section>
+        <section id="second_column">
+            <div id="zone" class="zone">
+                <label for="example_options">Zona:</label>
+                <select id="example_options" name="example_options" class="select-style">
+                    <option value="option1">Ecuador</option>
+                    <option value="option2">Colombia</option>
+                    <option value="option3">Perú</option>
+                    <option value="option4">Argentina</option>
+                    <option value="option5">Chile</option>
+                    <option value="option6">Paraguay</option>
+                </select>
+            </div>
+            <div id="weigth_value">
+                <div class="input-addon">
+                    <label for="peso">Peso:</label>
+                    <input type="number" id="peso" name="peso" class="input-style">
+                </div>
+                <div class="input-addon-tarifa">
+                    <label for="tarifa">Tarifa:</label>
+                    <input type="number" id="tarifa" name="tarifa" class="input-style">
+                </div>
+            </div>
+        </section>
+     
+        <br>
+        <input id="calculate" type="submit" value="Calculate" class="calculate">
+    </form>
+    <div id="result"></div>
+    <script src="js/script.js"></script>
+</body>
+</html>
